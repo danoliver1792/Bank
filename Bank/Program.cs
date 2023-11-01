@@ -29,4 +29,26 @@ class ContaBancaria
             Console.WriteLine("Valor de deposito invalido");
         }
     }
+
+    // método para sacar dinheiro na conta
+    public void Sacar(double valor)
+    {
+        if (valor > 0 && valor <= saldo)
+        {
+            saldo -= valor;
+            Console.WriteLine($"Saque de R${valor} realizado com sucesso");
+        }
+        else
+        {
+            Console.WriteLine("Saldo insuficiente na conta");
+        }
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+
+    }
 }
